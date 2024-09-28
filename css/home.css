@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* 主页样式开始 */
+.titleimg{
+    background-image: url("../images/home.jpg");
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    transition: 0.5s ease 0s;
+    animation: load 1.5s; 
+}
+
+/* 主页文字样式开始 */
+.titleimg .title{
+    width:100%;
+    padding:300px;
+    font-size: 100px;
+    font-weight: bolder;
+    color: #000000;
+}
+/* 主页文字样式结束 */
+
+.main{
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.sec{
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+}
+/* 主页动态 */
+@keyframes load{
+    0%{
+        background-position-y: 100px;
+        opacity: 0;
+    }
+    100%{
+        background-position-y: 0px;
+        opacity: 1;
+    }
+}
